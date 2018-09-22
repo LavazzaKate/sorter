@@ -24,10 +24,11 @@ class Sorter {
 
   sort(indices) {
      var arrSorter=[];
+     indices.sort();
      for(var i=0; i<indices.length; i++) {
        arrSorter.push(this.sorter[indices[i]]);
      }
-      arrSorter.sort(this.compareFunction);
+      arrSorter.sort(this.comporator);
 
       for(var i=0; i<indices.length; i++) {
         this.sorter[indices[i]]=arrSorter[i];
